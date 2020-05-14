@@ -19,7 +19,7 @@ import com.sellerms.models.*;
 
 @RestController
 @RequestMapping(value = "/salesmanage")
-public class ItemController {
+public class SellerController {
 	@Autowired
 	private ItemService itemservice;
 	
@@ -66,7 +66,7 @@ public class ItemController {
     }
 	
 	
-	@GetMapping("/{userId}")
+	@GetMapping("/report/{userId}")
     public ResponseEntity<List<ReportModel>> getReport(@PathVariable Integer userId) {
 		
 		List<ReportModel> lst = reportservice.getReport(userId);
